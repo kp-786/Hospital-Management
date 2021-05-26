@@ -25,7 +25,7 @@ BLOOD_GROUPS = [
 class UserProfile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_profile')
     name = models.CharField(max_length=40)
-    phone_regex = RegexValidator(regex=r'/^(\+\d{1,3}[- ]?)?\d{10}$/')
+    phone_regex = RegexValidator(regex=r'^[0][1-9]\d{9}$|^[1-9]\d{9}$')
     phone = models.CharField(max_length=17, validators=[phone_regex], blank=True)
     email = models.EmailField(blank=True)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=1, blank=True)
@@ -43,4 +43,4 @@ class UserProfile(models.Model):
         ordering = ('-id',)
     
     def __str__(self):
-        return "Profile for {}".format(self.user)
+        return self.user

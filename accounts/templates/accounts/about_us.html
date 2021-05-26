@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     <div class="jumbotron">
         <h1 align="center">Orchid Hospital</h1>
-        <style>
-            .c {
-              font-style: oblique;
-            }
-        </style>
-        <h4 align="right" class='c'>We care to cure you.</h4>
         <p>About Us Page...</p>
+    </div>
+    <div class="container">
+        <img src="{% static 'images/img2.png' %}" style="width:100%">
     </div>
 {% endblock %}
     
