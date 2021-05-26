@@ -12,6 +12,4 @@ urlpatterns = [
     path("appointment/create", views.AppointmentCreateView, name="appointment_create"),
     path("recdashboard/", views.recdashboard, name="rec_dashboard"),
     path("hrdashboard/", views.hrdashboard, name="hr_dashboard"),
-    path("hraccounting/", views.hraccounting, name="hr_accounting"),
-    path("payments/", views.patientpayments, name="patient_payments"),
 ]
