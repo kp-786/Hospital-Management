@@ -51,7 +51,7 @@ def PrescriptionCreateView(request):
 
 @login_required(login_url='/login/')
 def AppointmentCreateView(request):
-    form_class = AppointmentForm
+    form_class = Appoin
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():

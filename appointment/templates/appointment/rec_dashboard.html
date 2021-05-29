@@ -18,7 +18,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-10">
             <h3>Appointments</h3>
             <div class="card card-body">
                 <a href="{% url 'appointment:appointment_create' %}"><button class="btn btn-primary">Create Appointment</button></a>
@@ -43,8 +43,10 @@
                 </table>
             </div>
         </div>
-        
-        <div class="col-md-7">
+    </div>
+    
+    <div class="row">
+        <div class="col-md-10">
             <h3>Last 5 Patients</h3>
             <div class="card card-body">
                 <a href="{% url 'user_profile:profile_create' %}"><button class="btn btn-primary">Create Patient</button></a>

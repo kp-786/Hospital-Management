@@ -30,7 +30,6 @@
                         <th>Age</th>
                         <th>Status</th>
                         <th>Department</th>
-                        <th>Attendance</th>
                         <th>Salary</th>
                         <th>Update</th>
                         <th>Remove</th>
@@ -45,7 +44,6 @@
                         <td>{{ obj.age }}</td>
                         <td>{{ obj.status }}</td>
                         <td>{{ obj.department }}</td>
-                        <td>{{ obj.attendance }}</td>
                         <td>{{ obj.salary }}</td>
                         <td><a href="{% url 'user_profile:doc-profile-pk' pk=obj.user.id %}"><button class="btn btn-warning">Update</button></a></td>
                         <td><a href="{% url 'user_profile:doc-profile-delete' pk=obj.user.id %}"><button class="btn btn-danger">Delete</button></a></td>

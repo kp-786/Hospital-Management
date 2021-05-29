@@ -32,11 +32,8 @@ class UserProfile(models.Model):
     age = models.IntegerField(blank=True, null=True)
     address = models.CharField(max_length=500, blank=True)
     blood_group = models.CharField(choices=BLOOD_GROUPS, max_length=3, blank=True)
-    med_rps = models.FileField(upload_to='profile/med_rps', blank=True)
-    case_paper = models.IntegerField(blank=True, null=True)
     department = models.CharField(max_length=20, blank=True, null=True)
     salary = models.IntegerField(blank=True, null=True)
-    attendance = models.IntegerField(blank=True, null=True)
     status = models.CharField(choices=[('Active', 'Active'),('Inactive','Inactive')],null=True, blank=True, max_length=8)
     
     class Meta:

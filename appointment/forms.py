@@ -33,4 +33,4 @@ class AppointmentForm(forms.ModelForm):
             self.fields['doctor'].queryset = User.objects.filter(user_type='D')
             self.fields['date'].label = 'Date (DD-MM-YYYY)'
             self.fields['time'].label = 'Time 24 hr (HH:MM)'
-        
+    

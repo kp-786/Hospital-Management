@@ -6,11 +6,12 @@ class ProfileUpdateForm(forms.ModelForm):
     
     class Meta:
         model = UserProfile
-        fields = ('name','phone','email','gender','age','address','blood_group','med_rps','case_paper')
+        fields = ('name','phone','email','gender','age','address','blood_group')
 
 class DoctorProfileForm(forms.ModelForm):
     gender = forms.ChoiceField(choices=GENDER_CHOICES, required=False, widget=forms.RadioSelect)
     
     class Meta:
         model = UserProfile
-        fields = ('name','phone','email','gender','age','address','department','attendance','salary','status')
+        fields = ('name','phone','email','gender','age','address','department','salary','status')
+        
