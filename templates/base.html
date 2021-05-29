@@ -37,6 +37,7 @@
                             <li><a href="{% url 'appointment:doctor_appointments' %}" class="btn btn-simple">Appointments</a></li>
                             <li><a href="{% url 'appointment:doctor_prescriptions' %}" class="btn btn-simple">Prescriptions</a></li>
                             <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple"><button class="btn btn-warning">Log Out</button></a></li>
+                            <p align="right" style="color:white">Welcome Dr. {{user.first_name }} {{user.last_name}}</p>
                         {% endif %}
                             
                         {% if user.is_patient %}
@@ -47,6 +48,7 @@
                             <li><a href="{% url 'user_profile:profile' %}" class="btn btn-simple">Profile</a></li>
                             <li><a href="{% url 'appointment:med_history' %}" class="btn btn-simple">Medical History</a></li>
                             <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple"><button class="btn btn-warning">Log Out</button></a></li>
+                            <p align="right" style="color:white">Welcome Patient, {{user.first_name }} {{user.last_name}}</p>
                         {% endif %}
 
                         {% if user.is_receptionist %}
@@ -55,6 +57,7 @@
                             <li><a href="{% url 'accounts:contact' %}" class="btn btn-simple">Contact</a></li>
                             <li><a href="{% url 'appointment:rec_dashboard' %}" class="btn btn-simple">Dashboard</a></li>
                             <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple"><button class="btn btn-warning">Log Out</button></a></li>
+                            <p align="right" style="color:white">Welcome Receptionist, {{user.first_name }} {{user.last_name}}</p>
                         {% endif %}
                         
                         {% if user.is_HR %}
@@ -63,6 +66,7 @@
                             <li><a href="{% url 'accounts:contact' %}" class="btn btn-simple">Contact</a></li>
                             <li><a href="{% url 'appointment:hr_dashboard' %}" class="btn btn-simple">Dashboard</a></li>
                             <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple"><button class="btn btn-warning">Log Out</button></a></li>
+                            <p align="right" style="color:white">Welcome HR, {{user.first_name }} {{user.last_name}}</p>
                         {% endif %}
                         
                     {% else %}

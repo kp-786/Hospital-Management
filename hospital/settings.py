@@ -72,6 +72,10 @@ TEMPLATES = [
     },
 ]
 
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}
+
 WSGI_APPLICATION = 'hospital.wsgi.application'
 AUTH_USER_MODEL = 'accounts.User'
 
